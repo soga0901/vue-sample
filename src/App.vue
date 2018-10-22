@@ -30,6 +30,12 @@ export default {
       this.msg = '';
     },
   },
+  created() {
+    const that = this;
+    $.getJSON('http://www.geonames.org/postalCodeLookupJSON?postalcode=10504&country=US&callback=?', {}, (json) => {
+      that.msg = json.postalcodes[0].adminName1;
+    });
+  },
 };
 </script>
 
