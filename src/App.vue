@@ -1,22 +1,20 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    <!-- <HelloWorld/> -->
-    <Soga />
+  <div>
+    <p>
+      {{ msg }}
+    </p>
+    <input type="text" v-model="msg">
   </div>
 </template>
-
 <script>
-// import HelloWorld from './components/HelloWorld';
-import Soga from './components/Soga';
 
 export default {
-  name: 'App',
-  components: {
-    // HelloWorld,
-    Soga,
-  },
-};
+  data () {
+    return {
+      msg: 'input something.',
+    }
+  }
+}
 </script>
 
 <style>
